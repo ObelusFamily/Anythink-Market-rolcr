@@ -10,4 +10,17 @@ When implementing a new feature or fixing a bug, please create a new pull reques
 
 ## First setup
 
-**[TODO 05/01/2018 @vanessa-cooper]:** _It's been a while since anyone ran a fresh copy of this repo. I think it's worth documenting the steps needed to install and run the repo on a new machine?_
+Get [Docker](https://docker.com) & [Docker Compose](https://https://docs.docker.com/compose/)
+Once you have ensured you have Docker & Compose and all related necessary libraries installed;
+From the root of the project dir run;
+docker-compose up    # Go grab a coffee because this part takes awhile
+
+After docker-compose finishes PUMA webserver will be waiting on localhost. Check that everything worked by hitting this route;
+http://localhost:3000/api/ping
+
+Rails will first tell you their are pending migrations. Hit the button and run the migrations. The site will shortly load thereafter. 
+
+Congrats! We have our backend up! Let's check our frontend and make sure it's connected to the backend. Try to hit this route and create any test user;
+http://localhost:3001/register
+
+If that works, way to go! Everything is setup correctly. Happy hacking!
